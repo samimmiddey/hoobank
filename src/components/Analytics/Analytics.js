@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const data = [
    {
@@ -17,7 +18,13 @@ const data = [
 
 const Analytics = () => {
    return (
-      <div className='section-padding flex flex-col md:flex-row gap-6 sm:gap-10 md:gap-0 items-center justify-between'>
+      <motion.div
+         className='section-padding flex flex-col md:flex-row gap-6 sm:gap-10 md:gap-0 items-center justify-between'
+         initial={{ opacity: 0, y: 25 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 1, ease: 'easeInOut', delay: 0.3 }}
+         viewport={{ once: true }}
+      >
          {data.map((item, index) => (
             <div
                key={index}
@@ -33,7 +40,7 @@ const Analytics = () => {
                }
             </div>
          ))}
-      </div>
+      </motion.div>
    );
 };
 

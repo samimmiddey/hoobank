@@ -19,6 +19,9 @@ module.exports = {
       height: {
         '18': '72px'
       },
+      spacing: {
+        '18': '72px'
+      },
       lineHeight: {
         'perfect': '1.8'
       }
