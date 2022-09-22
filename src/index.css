@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #00040f;
+  color: white;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 10px;
+  background-color: #374151;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1450px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.drawer {
+  background-color: #1A1D27;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(157.81deg,
+      #def9fa -43.27%,
+      #bef3f5 -21.24%,
+      #9dedf0 12.19%,
+      #7de7eb 29.82%,
+      #5ce1e6 51.94%,
+      #33bbcf 90.29%);
+}
+
+.text-gradient {
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
+      #def9fa 0.89%,
+      #bef3f5 17.23%,
+      #9dedf0 42.04%,
+      #7de7eb 55.12%,
+      #5ce1e6 71.54%,
+      #33bbcf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.circle {
+  position: relative;
+}
+
+.circle::after {
+  position: absolute;
+  content: '';
+  top: 10%;
+  left: 10%;
+  height: 75%;
+  width: 75%;
+  border-radius: 50%;
+  background-color: #33bbcf;
+  z-index: -1;
+  filter: blur(100px);
+  opacity: 0.25;
+}
+
+.bg-black-gradient,
+.about-card:hover,
+.testimonial-card:hover {
+  background: linear-gradient(144.39deg,
+      #ffffff -278.56%,
+      #525252 -78.47%,
+      #11101d 91.61%);
+}
+
+@layer components {
+  .section-padding {
+    @apply pt-20;
+  }
+
+  .heading-h1 {
+    @apply text-3xl leading-relaxed font-semibold;
+  }
+
+  .body-text {
+    @apply text-gray-400 pr-0 leading-relaxed;
+  }
+
+  @media screen(sm) {
+    .section-padding {
+      @apply pt-24;
+    }
+
+    .heading-h1 {
+      @apply text-4xl leading-relaxed;
+    }
+
+    .body-text {
+      @apply pr-64;
+    }
+  }
+
+  @media screen(md) {
+    .body-text {
+      @apply pr-28 mt-2;
+    }
+  }
+
+  @media screen(lg) {
+    .section-padding {
+      @apply pt-28;
+    }
+
+    .body-text {
+      @apply pr-52 leading-perfect;
+    }
+  }
+
+  @media screen(xl) {
+    .section-padding {
+      @apply pt-36;
+    }
+
+    .heading-h1 {
+      @apply text-5xl leading-relaxed;
+    }
+  }
+}
+
+.nav-glass {
+  background: rgba(26, 29, 39, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 3px 30px -3px rgba(0, 246, 255, 0.15);
+}
+
+/* Active Navbar */
+.active,
+.drawer-active {
+  color: #00f6ff;
+}
+
+.drawer-active {
+  background-color: #1f2937;
+}
+
+/* Spinner */
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 8px solid #1f2937;
+  border-top-color: #00f6ff;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+}
