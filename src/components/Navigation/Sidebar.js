@@ -7,6 +7,12 @@ const navlinks = ['Home', 'About', 'Features', 'Products', 'Clients'];
 const Sidebar = ({ open, setOpen }) => {
    const menu = open ? 'right-0' : '-right-64';
 
+   if (open) {
+      document.body.classList.add('drawer-open');
+   } else {
+      document.body.classList.remove('drawer-open');
+   }
+
    return (
       <div className={`drawer-nav pt-7 pb-7 pl-6 pr-6 fixed top-0 bottom-0 w-64 drawer rounded-l-2xl ${menu} ease-in-out duration-500 z-50`}>
          <div className='flex items-center justify-between'>

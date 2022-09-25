@@ -17,6 +17,10 @@ body {
   color: white;
 }
 
+body.drawer-open {
+  overflow: hidden;
+}
+
 /* Scroll Bar */
 ::-webkit-scrollbar {
   width: 14px;
