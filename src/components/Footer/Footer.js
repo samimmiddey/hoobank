@@ -152,7 +152,7 @@ const Footer = () => {
          <div className='w-full bg-gray-800 mt-6 mb-5' style={{ height: '1px' }} />
          <div className='flex flex-col sm:flex-row sm:justify-between items-center gap-4 sm:gap-0'>
             <p className='text-gray-400 text-center'>
-               Copyright &copy; Carebank, 2022. All Rights Reserved
+               Copyright &copy; Hoobank, 2022. All Rights Reserved.
             </p>
             <div className='flex items-center gap-6'>
                <RiFacebookCircleFill style={{ fontSize: '1.75rem', color: '#6b7280' }} />
